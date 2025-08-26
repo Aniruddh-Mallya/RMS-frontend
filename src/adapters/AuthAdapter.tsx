@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://5432/api";
-const useMockData = import.meta.env.VITE_USE_MOCK_DATA === "true" || true;
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001/api";
+const useMockData = import.meta.env.VITE_USE_MOCK_DATA === "true";
 
 export const AuthAdapter = {
   login: async (email: string, password: string) => {

@@ -3,6 +3,7 @@ import HomePage from "../pages/Home";
 import LoginPage from "../pages/LoginPage";
 import ResearchDashboard from "../pages/ResearchDashboard";
 import ProtectedRoutes from "./ProtectedRoutes";
+import React from "react";
 
 const AppRoutes = () => {
   return (
