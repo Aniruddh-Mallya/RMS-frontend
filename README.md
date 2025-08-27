@@ -10,7 +10,7 @@ This is the frontend for the Research Management System, a modern Single-Page Ap
 
 ## 🌐 Live Site
 
-**[View the deployed application here](https://your-frontend-name.azurestaticapps.net)**
+**[View the deployed application here](https://brave-bush-03579dc03.1.azurestaticapps.net)**
 
 ---
 
