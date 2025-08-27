@@ -1,54 +1,67 @@
-# React + TypeScript + Vite
+# RMS Frontend (Research Management System)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
-Currently, two official plugins are available:
+This is the frontend for the Research Management System, a modern Single-Page Application (SPA) built with React and Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🌐 Live Site
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**[View the deployed application here](https://brave-bush-03579dc03.1.azurestaticapps.net)**
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This application is deployed on **Azure Static Web Apps**. This service provides:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+* **Global Distribution:** The site is hosted on a **global Content Delivery Network (CDN)**, ensuring fast load times for users anywhere in the world.
+* **Continuous Deployment:** CI/CD is enabled through **GitHub Actions**. Every push to the `main` branch is automatically built and deployed.
+* **Serverless Functions:** While not used in this iteration, the architecture allows for easy integration with Azure Functions for serverless API endpoints.
+
+
+
+---
+
+## ✨ Features
+
+* Secure user authentication with JWT.
+* A protected dashboard for viewing and managing research projects.
+* The ability to add new research projects to the system.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Framework:** React 19
+* **Build Tool:** Vite
+* **Language:** TypeScript
+* **Routing:** React Router
+* **API Communication:** Axios
+
+---
+
+## ⚙️ Configuration & Local Setup
+
+To connect to a local backend API, create a `.env` file in the root directory and add the following variable:
+
+.env file for rms-frontend
+VITE_API_URL=http://localhost:5001/api
+
+
+---
+
+## 🏃‍♀️ Running Locally
+
+1.  Clone the repository.
+2.  Install the dependencies:
+    ```bash
+    npm install
+    ```
+3.  Start the development server:
+    ```bash
+    npm run dev
+    ```
